@@ -1,0 +1,509 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #2a2d36;
+    font-family: 'Open Sans', sans-serif;    
+    color: #ffffff;
+    height: 100%;
+    font-size: 10px;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 450px;
+}
+
+header {
+    flex: 0 0 14rem;
+    background-color: #0b0c10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .user-info-off h2 {
+    margin-top: 2rem;
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin-right: 6rem;
+}
+
+header .user-info-off h2 span {
+    font-weight: 700;
+}
+
+header .user-info-on h2 {
+    margin-top: 3rem;
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin-right: 6rem;
+    line-height: 1.4rem;
+}
+
+header .user-info-on h2 span {
+    font-weight: 700;
+}
+
+header .user-info-on .user-info-name {
+    text-align: right;
+    font-weight: 300;
+}
+
+header .html-logo {
+    position: relative;
+    margin-left: 6rem;
+    background-color: #303030;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    transition: background-color .3s;
+}
+
+header .html-logo:hover {
+    background-color: #e88301;
+}
+
+header .html-logo .icon {
+    position: absolute;
+    top: 2rem;
+    left: 2.4rem;
+    font-size: 7rem;
+}
+
+footer {
+    flex: 0 0 14.2rem;
+    background-color: #15161a;
+    border-top: 2px solid #0a0b0d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+main {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+main .main-header {
+    margin-top: 6.5rem;
+    text-align: center;
+}
+
+main .main-header h1 {
+    padding-left: 1rem;
+    font-size: 4.8rem;
+    font-weight: 400;
+    position: relative;
+}
+
+main .main-header h1:after {
+    position: absolute;
+    content: '';
+    width: 23rem;
+    height: 1px;
+    background: #ffffff;
+    margin: 0 auto;
+	left: 0;
+    right: 0;
+    bottom: -1.9rem;
+}
+
+main .main-row {
+    margin-top: 10rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    padding: 0 4.5rem;
+}
+
+main .main-row h3 {
+    text-transform: uppercase;
+}
+
+main .main-block {
+    min-width: calc(100% / 3);
+    flex: 1;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #2c2d32;
+}
+
+footer .css-logo-block {
+    margin-left: 6rem;
+    height: 14rem;
+    width: 15.3rem;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+}
+
+footer .border {
+    margin-top: 1.1rem;
+    height: 11.3rem;
+    width: 11.3rem;
+    border: 1px solid #2c2d32;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+footer .css-logo-block:hover > h3 span {
+    color: #a4a8b3;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+footer .css-logo-block:hover .border{
+    border-color: #e88301;
+    transform: rotateY(180deg);
+    transition: border-color .3s, transform 1s;
+}
+
+footer .css-logo-block h3 {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -.6rem;
+    left: .8rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+    
+}
+
+footer .css-logo-block h3 span {
+    display: block;
+}
+
+footer .nabthat-logo {
+    display: block;
+}
+
+footer .nabthat-logo h3 {
+    position: relative;
+    margin-left: 11.2rem;
+    margin-top: 2.3rem;
+}
+
+footer .nabthat-logo h3:after,
+footer .nabthat-logo h3:before {
+    position: absolute;
+    content: '';
+    width: 5.6rem;
+    height: 1px;
+    background: #2c2d32;
+    bottom: 1.7rem;
+}
+
+footer .nabthat-logo h3:before {
+    left: -6rem;
+}
+
+footer .nabthat-logo h3:after {
+    right: -6rem;
+}
+
+footer label {
+    display: block;
+    border: 1px solid #2c2d32;
+    border-radius: 3px;
+    margin-right: 6rem;
+    margin-bottom: 2.5rem;
+    padding:1.1rem 8.5rem 1.3rem 9.7rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #a3a6b5;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s;
+}
+
+footer label:hover {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+footer input[type=checkbox] {
+    visibility: hidden;
+}
+
+footer input[type=checkbox]:checked ~ label {
+    color: #ffffff;
+    border-color: #fff;
+}
+
+footer input[type=checkbox]:checked ~ label .arrow {
+    transform: rotate(45deg);
+    margin-bottom: .5rem;
+    border-color: #ffffff;
+}
+
+footer input[type=checkbox]:checked ~ .toggle-menu {
+    display: block;
+}
+
+footer label .arrow {
+    border: solid #a3a6b5;
+    border-width: 0 .3rem .3rem 0;
+    display: inline-block;
+    padding: .3rem;
+    margin-left: 1.7rem;
+    transform: rotate(-135deg);
+}
+
+footer label:hover .arrow {
+    border-color: #ffffff;
+    transition: border-color .3s; 
+}
+
+.main-row .title {
+    width: 95%;
+    white-space: nowrap;                 
+    overflow: hidden;              
+    text-overflow: ellipsis; 
+}
+
+.radio-container {
+    padding: 3.3rem 1.1rem;
+}
+.radio-container ul li {
+    display: block;
+    text-align: left;
+    margin-bottom: 3.7rem;
+    position: relative;
+}
+
+.radio-container ul li input[type=radio] {
+    visibility: hidden;
+}
+
+.radio-container ul li label {
+    font-weight: 300;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.radio-container ul li .radio-button-checkmark {
+    display: block;
+    position: absolute;
+    border: .5rem solid #ffffff;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+    top: -.2rem;
+    left: -3.6rem;
+}
+
+.radio-container ul li .radio-button-checkmark::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%; 
+    height: 1.8rem;
+    width: 1.8rem;
+    top: .6rem;
+    left:.6rem;
+    margin: auto;
+}
+  
+.radio-container ul li input[type=radio]:checked ~ .radio-button-checkmark::before {
+    background-color: #ffffff;
+    transition: background-color .3s;
+}
+  
+.radio-container ul li input[type=radio]:checked ~ .radio-label {
+    font-weight: 600;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; 
+    padding-top: 4.5rem;  
+}
+
+.buttons-container .button {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding:1.2rem 5.6rem;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #a1a7b5;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttons-container .button:hover {
+    color: #ffffff;
+    background-color: #e88301;
+    transition: background-color .3s;
+}
+
+.text-contianer {
+    padding: 3rem 2.8rem;
+    color: #a1a7b5;
+    font-weight: 200;
+    font-size: 1.75rem;
+    line-height: 2.2rem;
+}
+
+.text-contianer article {
+    margin-bottom: 2rem;
+}
+
+.toggle-menu {
+    position: absolute;
+    right: 6rem;
+    bottom: 14.2rem;
+    height: 9rem;
+    width: 27rem;
+    padding-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 3px 3px 0 0;
+    display: none;
+}
+
+.toggle-menu h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    color: #16151a;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left;
+}
+
+.toggle-menu h3 .arrow {
+    border: solid #16151a;
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+    padding: .4rem;
+    margin: 0 1.2rem 0 2rem;
+    transform: rotate(-45deg);
+}
+
+.toggle-menu h3:hover {
+    color: #e88301;
+    
+}
+
+.toggle-menu h3:hover .arrow {
+    border-color: #e88301;
+}
+
+.alert {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.alert .alert-content {
+    background-color: #2a2d36;
+    border: 2px solid #0a0b0d;
+    border-radius: 3px;
+    margin: 15% auto; 
+    padding: 20px;
+    width: 30%;
+}
+
+.alert .alert-content p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.alert .close {
+    color: #ffffff;
+    float: right;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+  
+.alert .close:hover,
+.alert .close:focus {
+    color: #e88301;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1919px) {
+    html, body {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 1599px) {
+    html, body {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    html, body {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    html, body {
+        font-size: 7px;
+    }
+
+    main .main-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main .main-row .main-block {
+        min-width: 300px;
+    }
+
+    .buttons-container {
+        padding-bottom: 4.5rem;
+    }
+
+    .alert .alert-content {
+        margin: 30% auto; 
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer .nabthat-logo {
+        display: none;
+    }
+    
+    .alert .alert-content {
+        margin: 30% auto; 
+        width: 90%;
+    }
+}
