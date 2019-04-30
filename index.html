@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nabthat</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=latin-ext" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <header>
+        <a href="/">
+          <div class="html-logo">
+              <i class="fab fa-html5 icon"></i>
+          </div>
+        </a>
+
+        <div id="user-info-off" class="user-info-off" style="display: block">
+          <h2 >Zadanie <span>rekrutacyjne</span></h2>
+        </div>
+
+        <div  id="user-info-on" class="user-info-on" style="display: none">
+            <h2>Zadanie <span>rekrutacyjne</span></h2>
+            <h2 class="user-info-name">Konrad Krakowiecki</h2>
+        </div>
+      </header>
+
+      <main>
+
+        <div class="main-header">
+          <h1>Nagłówek H1</h1>
+        </div>
+        
+        <div class="main-row">
+
+          <div class="main-block">
+            <h3>Blok pierwszy</h3>
+            <div class="radio-container">
+              <ul>
+                <li>
+                  <input class="radio-input" type="radio" checked="checked" value="first-option" id="first-option" name="selector">
+                  <label class="radio-label" for="first-option">Opcja pierwsza</label>
+                  <span class="radio-button-checkmark"></span>
+                </li>
+                <li>
+                  <input class="radio-input" type="radio" value="second-option" id="second-option" name="selector">
+                  <label class="radio-label" for="second-option">Opcja druga</label>
+                  <span class="radio-button-checkmark"></span>
+                </li>
+                <li>
+                  <input class="radio-input" type="radio" value="random-option" id="random-option" name="selector">
+                  <label class="radio-label" for="random-option">Opcja losowa</label>
+                  <span class="radio-button-checkmark"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="main-block">
+            <h3>Blok drugi</h3>
+            <div class="buttons-container">
+              <div id="zastap-button" class="button">Zastąp</div>
+              <div id="doklej-button" class="button">Doklej</div>
+            </div>
+          </div>
+
+          <div class="main-block">
+            <h3 class="title">Blok z długą nazwą która sama się przytnie do opowiedniej długości.</h3>
+            <div class="text-contianer">
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+      <footer>
+        <div class="css-logo-block">
+          <div class="border"></div>
+          <h3><span>css</span><span>is</span><span>awesome</span></h3>
+        </div>
+        <div class="nabthat-logo"><h3>nabthat</h3></div>
+        <div>
+          <input type="checkbox" id="toggle-menu" name="toggle-menu">
+          <label for="toggle-menu">pokaż<i class="arrow"></i></label>
+          <div class="toggle-menu">
+            <div id="reset-button"><h3><i class="arrow"></i>Zresetuj ustawienia</h3></div>
+            <div id="name-button"><h3><i class="arrow"></i>Pokaż dane osobowe</h3></div>
+          </div>
+        </div>
+      </footer>
+
+      <div id="alert" class="alert">
+        <div class="alert-content">
+          <span class="close">&times;</span>
+          <p id="alert-text"></p>
+        </div>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
